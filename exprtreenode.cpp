@@ -1,37 +1,28 @@
 /* Do NOT add/remove any includes statements from this header file */
 /* unless EXPLICTLY clarified on Piazza. */
 #include "exprtreenode.h"
+
+//Write your code below this line
+
 ExprTreeNode::ExprTreeNode(){
+
     type="";
-    val=new UnlimitedRational();
-    left=nullptr;
-    right=nullptr;
+    num=0;
+    left=NULL;
+    right=NULL;
     id="";
-    evaluated_value=new UnlimitedRational();
-}
-ExprTreeNode::ExprTreeNode(string t,UnlimitedInt *v){
+    }
 
-    UnlimitedRational *x=new UnlimitedRational(v,new UnlimitedInt(1));
-    type=t;
-    left=nullptr;
-    right=nullptr;
-    id="";
-    val=x;
-    evaluated_value=x;
+ExprTreeNode::ExprTreeNode(string t,int v){
+  type=t;
+  num=v;
+  left=NULL;
+  right=NULL;
+  id="";
 }
-ExprTreeNode::ExprTreeNode(string t, UnlimitedRational* v){
-    type=t;
-    UnlimitedRational* x=new UnlimitedRational(v->get_p(),v->get_q());
-    val=x;
-    left=nullptr;
-    right=nullptr;
-    id="";
-    evaluated_value=x;
-}
+
 ExprTreeNode::~ExprTreeNode(){
-    delete val;
-    left=nullptr;
-    right=nullptr;
-
-
+    left=NULL;
+    right=NULL;
 }
+
